@@ -1,0 +1,175 @@
+@import url('http://fonts.googleqapis.com/css2?family=Inter:wght@200;300;400;500;600;7006display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:#ff7613;
+    --text-color:#727171;
+}
+html{
+    font-size: 10px;
+}
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: black;
+}
+img{
+    width: 100%;
+    clip-path: circle(50%);
+}
+.description{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.title{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size:2rem ;
+    text-transform:uppercase ;
+    margin-top: 5rem;
+}
+.item_perTitle {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 300;
+}
+.item_title{
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+.item_subtitle{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+/* layout */
+.container{
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    padding: 5rem;
+    background-color: #070707;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+@media screen  and (max-width:768px){
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 7rem;
+    }    
+}
+.group-1,.group-2{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.group-3{
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    display: flex;
+    gap: 5rem;
+   
+}
+.group-3 > div{
+    flex: 1;
+}
+.profile{
+    grid-column: 1/-1;
+    margin-bottom: 4rem;
+}
+.profile_container{
+    display: flex;
+    gap: 2rem;
+}
+.profileImg{
+    max-width: 250px;
+}
+.profile_name_firstName{
+    color: white;
+    font-weight: 200;
+    font-size: clanp(2rem,8vw,4rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.profile_name_lastName{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: clanp(2.5rem, 8vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 3rem;
+}
+.profile_title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color:#fff;
+}
+@media only screen and (max-width:768px){
+    .profile_container{
+        flex-direction: column;
+    }
+}
+.skill_list{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+.ref_item{
+    margin-top: 2rem;
+}
+.ref_name{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.edu_item{
+    margin-top: 2rem;
+}
+.certification_item{
+    margin-top: 2rem;
+}
+.edu_item::nebkit-srollbar-track{
+    background-color: #bbb;
+    border-radius: 5px;
+}
+li{
+    color: #fff;
+    font-size: 1.5rem;
+}
+hr{
+    grid-column: 1/-1;
+    width: 80%;
+    margin: 0 auto;
+
+}
+.social_items{
+    margin-top: 2rem;
+}
+.social_item{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--text-color);
+}
+.social_item:hover{
+    color: var(--primary-color);
+}
+.social_item svg{
+    width: 2rem;
+}
